@@ -1,0 +1,385 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #D6F3FF;
+    background: linear-gradient(to right, #D6F3FF, #5086bd);
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.logo img {
+    width: 100px;
+    border-radius: 100px;
+}
+
+
+h2 {
+    vertical-align: center;
+    text-align: center;
+}
+
+
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #005c97, #363795);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #FFF;
+    height: 100px;
+    padding: 1em;
+}
+
+
+
+
+
+
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding-left: 30px;
+
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    font-family: "Raleway" sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+}
+
+.menu li a::before,
+.menu li a::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: #FFF;
+    transition: .5s;
+}
+
+.menu li a::after {
+    left: 0;
+    bottom: -10px;
+}
+
+.menu li a::before {
+    right: 0;
+    top: -5px;
+}
+
+.menu li a:hover::after,
+.menu li a:hover::before {
+    width: 100%;
+}
+
+
+/*fin modif*/
+
+.titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-family: "Raleway" sans-serif;
+    font-size: 1.5rem;
+}
+
+.trait-separation {
+    border: 3px solid rgb(62, 81, 158);
+    margin: 2% 40% 0% 40%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 5% 15% 0% 15%;
+}
+
+.container .item {
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+
+
+
+.icon-camera {
+    display: inline-block;
+    position: absolute;
+    top: +8px;
+    right: +8px;
+    border-radius: 30px;
+    background-image: url('/image/camera.png');
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.icon-plomberie{
+    display: inline-block;
+    position: absolute;
+    top: +8px;
+    right: +8px;
+    border-radius: 30px;
+    background-image: url('/image/vagues.png');
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.icon-fuite {
+    display: inline-block;
+    position: absolute;
+    top: +8px;
+    right: +8px;
+    border-radius: 30px;
+    background-image: url('/image/loupe.png');
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.icon-debouchage {
+    display: inline-block;
+    position: absolute;
+    top: +8px;
+    right: +8px;
+    border-radius: 30px;
+    background-image: url('/image/goute.png');
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.icon-tracage {
+    display: inline-block;
+    position: absolute;
+    top: +8px;
+    right: +8px;
+    border-radius: 30px;
+    background-image: url('/image/crayon.png');
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.icon-reparation {
+    display: inline-block;
+    position: absolute;
+    top: +8px;
+    right: +8px;
+    border-radius: 30px;
+    background-image: url('/image/outils.png');
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 45px 10px 45px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2%;
+    background-color: #ffffff;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25%;
+}
+
+.item-footer {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.footer-phone,
+.footer-email {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-phone a,
+.footer-email a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+}
+
+
+.footer-phone div,
+.footer-email div {
+    padding-left: 5px;
+    padding-top: 10%;
+}
+
+/*responsive*/
+@media screen and (max-width: 900px) {
+
+    .logo img {
+        width: 80px;
+    }
+
+    .top-nav {
+        position: relative;
+    }
+
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+    }
+
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        transform: translateY(40px);
+        display: flex;
+        border: 1px solid #1887e8fb;
+        height: 80px;
+        padding: 5%;
+        transition: linear 0.2s;
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background: linear-gradient(to left, #005c97, #363795);
+    }
+
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+
+    .top-nav {
+        height: 90px;
+    }
+
+    .trait-separation {
+        margin: 2% 30% 0% 30%;
+    }
+
+
+
+    .container {
+        margin-top: 35%;
+    }
+
+    .container .item {
+        width: 300px;
+        height: 200px;
+    }
+}
